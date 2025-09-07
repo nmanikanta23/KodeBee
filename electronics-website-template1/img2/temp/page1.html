@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KodeBee - AI x IoT Education</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .container-main {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      margin-right: 20px;
+    }
+    .sidebar h3 {
+      background: #f97316;
+      color: #fff;
+      padding: 10px;
+      margin: 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #ddd;
+    }
+    .sidebar ul li {
+      padding: 10px;
+      border-bottom: 1px dashed #aaa;
+      cursor: pointer;
+    }
+    .sidebar ul li:hover {
+      background: #f3f3f3;
+    }
+    .contact {
+      margin-top: 20px;
+    }
+    .contact h3 {
+      background: #f97316;
+      color: #fff;
+      padding: 10px;
+      margin: 0;
+    }
+    /* Main content */
+    .main-content {
+      flex: 1;
+    }
+    .main-content h2 {
+      margin-bottom: 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 10px;
+      background: #fff;
+    }
+    .product a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      max-height: 180px;
+      object-fit: contain;
+    }
+    .product p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Spinner Start -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Topbar Start -->
+  <div class="container-fluid px-5 d-none border-bottom d-lg-block">
+    <div class="row gx-0 align-items-center">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 text-center">
+        <small class="text-dark">Call Us: </small>
+        <a href="#" class="text-muted">9346 9346 99</a>
+      </div>
+      <div class="col-lg-4 text-end">
+        <div class="d-inline-flex align-items-center" style="height: 45px;">
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle text-muted mx-2" data-bs-toggle="dropdown"><small>English</small></a>
+            <div class="dropdown-menu rounded">
+              <a href="#" class="dropdown-item">English</a>
+              <a href="#" class="dropdown-item">Turkish</a>
+              <a href="#" class="dropdown-item">Spanish</a>
+              <a href="#" class="dropdown-item">Italian</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle text-muted ms-2" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
+            <div class="dropdown-menu rounded">
+              <a href="#" class="dropdown-item">Login</a>
+              <a href="#" class="dropdown-item">Wishlist</a>
+              <a href="#" class="dropdown-item">My Cart</a>
+              <a href="#" class="dropdown-item">Notifications</a>
+              <a href="#" class="dropdown-item">Account Settings</a>
+              <a href="#" class="dropdown-item">My Account</a>
+              <a href="#" class="dropdown-item">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <div class="container-fluid nav-bar p-0">
+    <div class="row gx-0 bg-primary px-5 align-items-center">
+      <div class="col-md-4 col-lg-3 text-lg-start">
+        <a href="index.html" class="navbar-brand p-0">
+          <h1 class="display-5 text-white m-0"><i class="fas fa-shopping-bag text-secondary me-2"></i>KodeBee</h1>
+        </a>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+              <a href="index.html" class="nav-item nav-link">HOME</a>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">PRODUCTS</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="steam-robot-kit.html">STEAM Robot Kit</a></li>
+                  <li><a class="dropdown-item" href="ai-iot-education.html">AI x IoT Education</a></li>
+                  <li><a class="dropdown-item" href="open-source-kit.html">Open-Source Kit</a></li>
+                  <li><a class="dropdown-item" href="maker-space.html">Maker Space</a></li>
+                  <li><a class="dropdown-item" href="competition-robot.html">Competition Robot</a></li>
+                  <li><a class="dropdown-item" href="parts.html">Parts</a></li>
+                </ul>
+              </div>
+              <a href="download.html" class="nav-item nav-link">DOWNLOAD</a>
+              <a href="learn.html" class="nav-item nav-link">LEARN</a>
+              <a href="news.html" class="nav-item nav-link">NEWS</a>
+              <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
+              <a href="about.html" class="nav-item nav-link">ABOUT US</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+
+
+
+<!-- Product Section -->
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- Product Images -->
+      <div class="col-lg-6">
+        <div id="mainImage" class="mb-3 text-center">
+          <img src="img2/img1.png" alt="KodeBee Robot Kit" class="img-fluid rounded shadow">
+        </div>
+        <div class="d-flex justify-content-center gap-2">
+          <img src="img2/img2.png" alt="Robot 1" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/img3.png" alt="Robot 2" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/img4.png" alt="Robot 3" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/img5.png" alt="Robot 4" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="col-lg-6">
+        <h2 class="product-title">12 in 1 KodeBee RobotStorm STEAM Robot Kit</h2>
+        <p class="product-model">Model: KB-181018</p>
+        <hr>
+        <p>
+          The KodeBee 12-in-1 RobotStorm STEAM Kit is a multi-functional DIY ultimate STEAM learning robot. It comes
+          with more than 450 parts and 12+ cool pre-set forms. Whether you are a mechanical or electronics engineer,
+          software developer, teacher, student, or maker – this kit makes robotics learning fun and hands-on.
+        </p>
+        <p>
+          With heavy-duty parts like beams, plates, gears, grippers, wheels, and advanced electronic modules (RGB
+          sensors, ultrasonic sensor, gyroscope, Bluetooth, and more), learners can easily build and program 12
+          different robots. Perfect for education, makerspaces, and competitions.
+        </p>
+        <div class="d-flex gap-3 mt-4">
+          <a href="contact.html" class="btn btn-orange px-4 py-2">Contact Us</a>
+          <a href="inquiry.html" class="btn btn-gray px-4 py-2">Quick Inquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product Section End -->
+
+
+  <div class="container py-5">
+  <h3 class="mb-4">Projects</h3>
+  <div class="row g-4">
+    
+    <!-- Project 1 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 text-center p-3 shadow-sm">
+        <img src="img2/temp/img11.png" class="card-img-top mb-3" alt="4DOF Robot Arm">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>1. 4DOF Robot Arm:</strong> The 4DOF Robot Arm robot is a robot arm that has four degrees of freedom. 
+            This robot arm is driven by two encoder DC motor, one 37 DC motor and one servo motor in robot gripper.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 text-center p-3 shadow-sm">
+        <img src="img2/temp/img12.png" class="card-img-top mb-3" alt="Robot Arm Tank">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>2. Robot Arm Tank:</strong> The Robot Arm Tank is a robot consists of a tank chassis, a robot arm structure, and a metal robot gripper.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 text-center p-3 shadow-sm">
+        <img src="img2/temp/img13.png" class="card-img-top mb-3" alt="Forklift Robot">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>3. Forklift Robot:</strong> A forklift robot car that can lift and move objectives. 
+            The lifting mechanism is made of a slider and transmission structure.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100 text-center p-3 shadow-sm">
+        <img src="img2/temp/img14.png" class="card-img-top mb-3" alt="Ball Launcher Robot">
+        <div class="card-body">
+          <p class="card-text">
+            <strong>4. Ball Launcher Robot:</strong> Ball launcher robot is a robot that can moving and shoot table-tennis size ball. 
+            It consists of a tank chassis and a shooting mechanism. Extra 3D file for table-tennis container is provided for schools which equipped with 3D printer.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card h-100 text-center p-3 shadow-sm">
+    <img src="img2/temp/img15.png" class="card-img-top mb-3" alt="Walking Robot">
+    <div class="card-body">
+      <p class="card-text">
+        <strong>5. Walking Robot:</strong> The walking robot is a robot which can simulate people walking forward and backward.
+        Driven by one single encoder DC motor, this robot is made of multiple transmission mechanism.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 6 -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card h-100 text-center p-3 shadow-sm">
+    <img src="img2/temp/img16.png" class="card-img-top mb-3" alt="Self-balancing Robot">
+    <div class="card-body">
+      <p class="card-text">
+        <strong>6. Self-balancing Robot:</strong> Self-balancing robot is a robot that can drive by two wheels,
+        supported by 3-axis and gyroscope sensor and two encoder DC motors.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 7 -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card h-100 text-center p-3 shadow-sm">
+    <img src="img2/temp/img17.png" class="card-img-top mb-3" alt="Bartender Robot">
+    <div class="card-body">
+      <p class="card-text">
+        <strong>7. Bartender Robot:</strong> A robot that can move very steadily and pour a bottle of drinks.
+        Features a new moving chassis structure.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 8 -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card h-100 text-center p-3 shadow-sm">
+    <img src="img2/temp/img18.png" class="card-img-top mb-3" alt="Camera Dolly">
+    <div class="card-body">
+      <p class="card-text">
+        <strong>8. Camera Dolly:</strong> It moves very steadily. The holder can fix your mobile phone to shoot photos and videos.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project 9 -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card h-100 text-center p-3 shadow-sm">
+    <img src="img2/temp/img19.png" class="card-img-top mb-3" alt="Walking Robot">
+    <div class="card-body">
+      <p class="card-text">
+        <strong>9.Rolling Tank:</strong>  Rolling Tank is a triangle robot that can moving on uneven surface.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 10 -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card h-100 text-center p-3 shadow-sm">
+    <img src="img2/temp/img20.png" class="card-img-top mb-3" alt="Self-balancing Robot">
+    <div class="card-body">
+      <p class="card-text">
+        <strong>10.Three-wheel Robot:</strong>  Three-wheel robot is the fastest and most flexible form of this kit.
+         Recommend doing line-following challenge in this form.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 11 -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card h-100 text-center p-3 shadow-sm">
+    <img src="img2/temp/img21.png" class="card-img-top mb-3" alt="Bartender Robot">
+    <div class="card-body">
+      <p class="card-text">
+        <strong>11.Spider Robot: </strong> Spider robot has four legs, moving like a spider.
+         Build this form to learn the structure of driving four legs by two motors.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project 12 -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card h-100 text-center p-3 shadow-sm">
+    <img src="img2/temp/img22.png" class="card-img-top mb-3" alt="Camera Dolly">
+    <div class="card-body">
+      <p class="card-text">
+        <strong>12.Detection Tank:</strong>  Detection Tank is a moving chassis robot with tracks, its flexibility is good. 
+        The track wheels can move on the uneven ground or run over small obstacles.
+      </p>
+    </div>
+  </div>
+</div>
+
+        
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container py-5">
+  <h3 class="mb-4">ELF Mainboard</h3>
+  <div class="row g-4">
+
+    <!-- Mainboard Image -->
+    <div class="col-12">
+      <div class="card h-100 text-center p-3 shadow-sm">
+        <img src="img2/temp/elf-mainboard.png" class="card-img-top mb-3" alt="ELF Mainboard">
+        <div class="card-body text-start">
+          <p class="card-text">
+            WEEEMAKE ELF mainboard is designed on the basis of modular design style whose microchip is replaceable.
+            This high-performance mainboard is designed for education.
+          </p>
+          <ul>
+            <li>Replaceable microchip: Support ATMEGA-328P, ESP32 chip, etc.</li>
+            <li>Same port for motor driver and sensor pin port, easy to use.</li>
+            <li>Random wiring, work with WeeeCode and Arduino.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specification Table -->
+    <div class="col-12">
+      <div class="card h-100 p-3 shadow-sm">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th>Operation Voltage:</th>
+              <td>6-12V</td>
+            </tr>
+            <tr>
+              <th>Wiring Port:</th>
+              <td>
+                1x MCU port (ATmega 328p or ESP32)<br>
+                4x RJ11 port<br>
+                2x DC motor port<br>
+                6x pin conversion port (4 of which can be stepper/encoder/dc motor port)<br>
+                1x Wireless Communication port (Bluetooth 2.4G)<br>
+                1x USB port (type B)
+              </td>
+            </tr>
+            <tr>
+              <th>Onboard Electronics:</th>
+              <td>
+                1x Buzzer<br>
+                1x Button<br>
+                1x RGB LED
+              </td>
+            </tr>
+            <tr>
+              <th>Software:</th>
+              <td>
+                WeeeCode (Scratch 3.0)<br>
+                Arduino IDE
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="container py-5">
+  <h3 class="mb-4">Curriculum</h3>
+  <div class="card p-3 shadow-sm">
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th>Form</th>
+          <th>Chapter</th>
+          <th>Learning Objectives</th>
+          <th>Learning Hour</th>
+          <th>Assembly Hour</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Walking robot</td>
+          <td>Chapter 1</td>
+          <td>Control Encoder DC Motor</td>
+          <td rowspan="3">90 mins</td>
+          <td rowspan="3">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 2</td>
+          <td>Control RGB lamp</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 3</td>
+          <td>Combining Encoder DC Motor and RGB Lamp</td>
+        </tr>
+        <tr>
+          <td>Rolling Tank</td>
+          <td>Chapter 4</td>
+          <td>Light-driven Robot</td>
+          <td>90 mins</td>
+          <td>3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 5</td>
+          <td>Voice-driven Robot</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Spider Robot</td>
+          <td>Chapter 6</td>
+          <td>Infrared remote controller robot</td>
+          <td rowspan="2">90 mins</td>
+          <td rowspan="2">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 7</td>
+          <td>Singing Robot</td>
+        </tr>
+        <tr>
+          <td>Detection Robot</td>
+          <td>Chapter 8</td>
+          <td>Obstacle Avoidance Robot</td>
+          <td rowspan="2">90 mins</td>
+          <td rowspan="2">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 9</td>
+          <td>Following Robot</td>
+        </tr>
+        <tr>
+          <td>3-wheeled Robot</td>
+          <td>Chapter 10</td>
+          <td>Line-following Robot</td>
+          <td rowspan="2">90 mins</td>
+          <td rowspan="2">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 11</td>
+          <td>Line-following Combined with Obstacle Avoidance</td>
+        </tr>
+        <tr>
+          <td>Forklift Robot</td>
+          <td>Chapter 12</td>
+          <td>Limit Infrared Remote Control Robot</td>
+          <td rowspan="2">90 mins</td>
+          <td rowspan="2">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 13</td>
+          <td>Infrared remote controller speed control Forklift Robot</td>
+        </tr>
+        <tr>
+          <td>Camera Dolly Robot</td>
+          <td>Chapter 14</td>
+          <td>Accurate Control of Encoder DC Motor</td>
+          <td rowspan="2">90 mins</td>
+          <td rowspan="2">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 15</td>
+          <td>Remote Control Bartender Robot</td>
+        </tr>
+        <tr>
+          <td>4DOF Robot Arm</td>
+          <td>Chapter 16</td>
+          <td>Remote Control Three-axis Mechanical Arm</td>
+          <td rowspan="2">90 mins</td>
+          <td rowspan="2">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 17</td>
+          <td>Remote Control Speed Regulation Three-axis Mechanical Arm</td>
+        </tr>
+        <tr>
+          <td>Bartender Robot</td>
+          <td>Chapter 18</td>
+          <td>Remote control Bartender Robot</td>
+          <td rowspan="2">90 mins</td>
+          <td rowspan="2">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 19</td>
+          <td>Automatic Bartender Robot</td>
+        </tr>
+        <tr>
+          <td>Robot Arm Tank</td>
+          <td>Chapter 20</td>
+          <td>Remote control Robot Arm Tank</td>
+          <td rowspan="3">90 mins</td>
+          <td rowspan="3">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 21</td>
+          <td>Limit Remote control Robot Arm Tank</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 22</td>
+          <td>Automatic handling robot</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 23</td>
+          <td>Remote ejection robot</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Ball Launcher</td>
+          <td>Chapter 24</td>
+          <td>Launch prompt function</td>
+          <td rowspan="2">90 mins</td>
+          <td rowspan="2">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 25</td>
+          <td>Complete remote controller ejection robot</td>
+        </tr>
+        <tr>
+          <td>Self-balancing robot</td>
+          <td>Chapter 26</td>
+          <td>Measurement and Application of Gyroscope Sensor Acceleration</td>
+          <td rowspan="3">90 mins</td>
+          <td rowspan="3">3 hours</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 27</td>
+          <td>Measurement and Application of Gyroscope Angle</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Chapter 28</td>
+          <td>Complete remote-control robot</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<div class="container py-5">
+  <h4 class="mb-4">Recommend Products</h4>
+  <div class="row text-center">
+    
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-smart-home.jpg" class="card-img-top" alt="AI Smart Home Learning Kit">
+        <div class="card-body">
+          <p class="card-text">AI Smart Home Learning Kit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/weecore-bot.jpg" class="card-img-top" alt="WeeeCore Bot AIOT Voice Programming Robot">
+        <div class="card-body">
+          <p class="card-text">WeeeCore Bot AIOT Voice Programming Robot</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-steam-kit.jpg" class="card-img-top" alt="AI STEAM Display Solution - AI Maker Space Kit">
+        <div class="card-body">
+          <p class="card-text">AI STEAM Display Solution - AI Maker Space Kit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-interactive-display.jpg" class="card-img-top" alt="AI Interactive Display Solution - AI Maker Space Kit">
+        <div class="card-body">
+          <p class="card-text">AI Interactive Display Solution - AI Maker Space Kit</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+         <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+  <div class="container py-5">
+
+    <!-- Contact Info -->
+    <div class="row g-4 rounded mb-5" style="background: rgba(255, 255, 255, .03);">
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Address</h4>
+            <p class="mb-2">39-8-28, PAIDAYA STREET, BACK SIDE GATEWAY HOTEL, Labbipet, Vijayawada, Andhra Pradesh
+              520010</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fas fa-envelope fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Mail Us</h4>
+            <p class="mb-2">info@purpletechnosolutions.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Telephone</h4>
+            <p class="mb-2">93469 9346 99</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fab fa-firefox-browser fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Website</h4>
+            <p class="mb-2">yoursite@ex.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="row g-5">
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Products</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> STEAM Robot Kit</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> AI x IoT Education</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Open-Source Kit</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Maker Space</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Competition</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Robot Parts</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Quick Links</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Products</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Latest News</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Company News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Industry News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Videos</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <h4 class="text-primary mb-4">Contact Us</h4>
+        <form action="#" method="post" class="p-3 border rounded bg-dark">
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Your Name *">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control bg-dark text-white border-light" placeholder="Email Address *">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Country">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Phone Number *">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control bg-dark text-white border-light" rows="3"
+              placeholder="Your message must be between 20–3,000 characters!"></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+ <!-- Back to Top -->
+  <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
