@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>KodeBee - Electronics Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid px-5 d-none border-bottom d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-4 text-center text-lg-start mb-lg-0">
+
+            </div>
+            <div class="col-lg-4 text-center d-flex align-items-center justify-content-center">
+                <small class="text-dark">Call Us: </small>
+                <a href="#" class="text-muted">9346 9346 99</a>
+            </div>
+
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-muted mx-2" data-bs-toggle="dropdown"><small> English</small></a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item"> English</a>
+                            <a href="#" class="dropdown-item"> Turkish</a>
+                            <a href="#" class="dropdown-item"> Spanol</a>
+                            <a href="#" class="dropdown-item"> Italiano</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-muted ms-2" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item"> Login</a>
+                            <a href="#" class="dropdown-item"> Wishlist</a>
+                            <a href="#" class="dropdown-item"> My Card</a>
+                            <a href="#" class="dropdown-item"> Notifications</a>
+                            <a href="#" class="dropdown-item"> Account Settings</a>
+                            <a href="#" class="dropdown-item"> My Account</a>
+                            <a href="#" class="dropdown-item"> Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-5 py-4 d-none d-lg-block">
+        <div class="row gx-0 align-items-center text-center">
+            <div class="col-md-4 col-lg-3 text-center text-lg-start">
+                <div class="d-inline-flex align-items-center">
+                    <a href="" class="navbar-brand p-0">
+                        <!-- ✅ Updated logo image -->
+                        <img src="img2/KodeBee.jpg" alt="KodeBee Logo" style="height:60px; margin-right:10px;">
+                        <span class="h2 text-primary m-0">KodeBee</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-6 text-center">
+                <div class="position-relative ps-4">
+                    <div class="d-flex border rounded-pill">
+                        <input class="form-control border-0 rounded-pill w-100 py-3" type="text" data-bs-target="#dropdownToggle123" placeholder="Search Looking For?">
+                        <select class="form-select text-dark border-0 border-start rounded-0 p-3" style="width: 200px;">
+                            <option value="All Category">All Category</option>
+                        </select>
+                        <button type="button" class="btn btn-primary rounded-pill py-3 px-5" style="border: 0;"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+  <!-- Navbar Start -->
+  <div class="container-fluid nav-bar p-0">
+    <div class="row gx-0 bg-primary px-5 align-items-center">
+      <div class="col-md-4 col-lg-3 text-lg-start">
+        <a href="index.html" class="navbar-brand p-0">
+        
+</h1>
+        </a>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+              <a href="index.html" class="nav-item nav-link">HOME</a>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">PRODUCTS</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="steam-robot-kit.html">STEAM Robot Kit</a></li>
+                  <li><a class="dropdown-item" href="ai-iot-education.html">AI x IoT Education</a></li>
+                  <li><a class="dropdown-item" href="open-source-kit.html">Open-Source Kit</a></li>
+                  <li><a class="dropdown-item" href="maker-space.html">Maker Space</a></li>
+                  <li><a class="dropdown-item" href="competition-robot.html">Competition Robot</a></li>
+                  <li><a class="dropdown-item" href="parts.html">Parts</a></li>
+                </ul>
+              </div>
+              <a href="download.html" class="nav-item nav-link">DOWNLOAD</a>
+              <a href="learn.html" class="nav-item nav-link">LEARN</a>
+              <a href="news.html" class="nav-item nav-link">NEWS</a>
+              <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
+              <a href="about.html" class="nav-item nav-link">ABOUT US</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+
+
+
+<!-- Product Section -->
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- Product Images -->
+      <div class="col-lg-6">
+        <div id="mainImage" class="mb-3 text-center">
+          <img src="img2/AI Factory Robot Kit/AI Factory Robot Kit.png" alt="KodeBee Robot Kit" class="img-fluid rounded shadow">
+        </div>
+        <div class="d-flex justify-content-center gap-2">
+          <img src="img2/AI Factory Robot Kit/AI Factory Robot Kit.png" alt="Robot 1" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/AI Factory Robot Kit/AI Factory Robot Kit1.png" alt="Robot 2" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/AI Factory Robot Kit/AI Factory Robot Kit2.png" alt="Robot 3" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/AI Factory Robot Kit/AI Factory Robot Kit3.png" alt="Robot 4" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="col-lg-6">
+        <h2 class="product-title">AI Factory Robot Kit - AI Robot Education Series</h2>
+        <p class="product-model">Model: 160556</p>
+        
+        <hr>
+        <p>
+          AI Factory Robot Kit is a project-based demostration robot kit for AI image recognition education.
+           It is a set of tools and materials that can be used to build and program a robot with artificial intelligence capabilities. 
+           These kits typically include components such as sensors, motors, and microcontrollers, as well as software
+            for programming the robot's movements and behaviors. The goal is to provide a fun and interactive way for people 
+            to learn about AI and robotics.
+        </p>
+        <p>This kit uses ELF AIOT K210 mainboard as the controller, includes three projects - the AI factory gate, the warehouse robot, 
+            and the AI sorting robot. It simulates the common scenes of AI factories. By assembly, program and control, students get 
+            hands-on experience on programming, robotics, AI education and industry 4.0.
+        </p>
+        
+        <div class="d-flex gap-3 mt-4">
+          <a href="contact.html" class="btn btn-orange px-4 py-2">Contact Us</a>
+          <a href="inquiry.html" class="btn btn-gray px-4 py-2">Quick Inquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product Section End -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KodeBee - AI x IoT Education</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- CSS Libraries -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .tabs { display: flex; margin-bottom: 20px; }
+    .tab { padding: 10px 20px; border: 1px solid #ccc; cursor: pointer; }
+    .tab.active { border-bottom: 2px solid orange; font-weight: bold; }
+    .robot-grid { display: flex; gap: 20px; margin-top: 20px; }
+    .robot { text-align: center; flex: 1; }
+    .robot img { max-width: 100%; border: 1px solid #ddd; }
+    .robot-title { margin-top: 8px; padding: 5px; background: #f7f7f7; border-left: 3px solid orange; font-weight: bold; }
+    .board-section img { max-width: 100%; margin-top: 10px; }
+    .programming { display: flex; justify-content: space-around; margin: 20px 0; }
+    .programming div { text-align: center; flex: 1; }
+    .programming img { max-width: 80%; }
+    table.curriculum { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    table.curriculum th, table.curriculum td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    table.curriculum th { background: #f4f4f4; }
+    .details { display: flex; align-items: center; gap: 20px; margin-top: 20px; }
+    .details img { max-width: 300px; border: 1px solid #ccc; }
+    .number-grid { display: grid; grid-template-columns: repeat(5, 50px); gap: 10px; }
+    .number-grid div { background: #f57c00; color: #fff; font-weight: bold; display: flex; justify-content: center; align-items: center; height: 50px; }
+  </style>
+</head>
+<body>
+
+
+  <!-- Product Section -->
+  <div class="container py-5">
+    <h2 class="mb-4">AI Factory Robot Kit - AI Robot Education Series</h2>
+    <p>
+      AI Factory Robot Kit is a metal DIY educational robotic kit for education of Industry 4.0 and AI education. 
+      It is both a demonstration kit and a learning robot kit. This robot kit provides 3 AI robot projects: 
+      the AI factory gate, the AI warehouse transportation robot, and the AI sorting robot.
+    </p>
+
+    <!-- Robot Grid -->
+    <div class="robot-grid">
+      <div class="robot">
+        <img src="img2/AI Factory Robot Kit/ai-sorting-robot.jpg" alt="AI Sorting Robot">
+        <div class="robot-title">AI Sorting Robot</div>
+      </div>
+      <div class="robot">
+        <img src="img2/AI Factory Robot Kit/ai-warehouse-robot.jpg" alt="AI Warehouse Robot">
+        <div class="robot-title">AI Warehouse Robot</div>
+      </div>
+      <div class="robot">
+        <img src="img2/AI Factory Robot Kit/ai-factory-gate.jpg" alt="AI Factory Gate">
+        <div class="robot-title">AI Factory Gate</div>
+      </div>
+    </div>
+
+    <!-- AI Controller -->
+    <div class="board-section mt-5">
+      <h2>AI Controller - ELF AIOT K210</h2>
+      <p>
+        Driven by K210 AI chips, ELF AIOT K210 is an affordable mainboard for developing and deploying machine learning applications on the edge. 
+        This makes the kit an excellent choice for students, educators, and hobbyists who want to experiment with AI and machine learning.
+      </p>
+      <img src="img2/AI Factory Robot Kit/elf-aiot-board.jpg" class="img-fluid rounded shadow" alt="ELF AIOT K210 - AI Development Board">
+    </div>
+
+    
+
+    <!-- Curriculum Table -->
+    <table class="curriculum table table-bordered">
+      <tr>
+        <th>No</th><th>Curriculum</th><th>Course content</th>
+        <th>No</th><th>Curriculum</th><th>Course content</th>
+      </tr>
+      <tr>
+        <td>1</td><td>Factory Study - Start</td><td>Begin a game to start the study of the AI factory, and get familiar with WeeeCode programming.</td>
+        <td>5</td><td>Smart Warehouse Robot</td><td>Learn to load and use the object recognition model.</td>
+      </tr>
+      <tr>
+        <td>2</td><td>AI Factory Gate - Structure Design</td><td>Know the structures of various types of structures, learn the mainboard, and design an AI factory gate.</td>
+        <td>6</td><td>Color Block LAB collection</td><td>Learn the color model LAB, use it to collect LAB values, and train single color recognition.</td>
+      </tr>
+      <tr>
+        <td>3</td><td>AI Factory Gate - Program Design</td><td>Learn to load and use the label and QR code recognition model.</td>
+        <td>7</td><td>AI Sorting Robot - Structure Design</td><td>Through the warehouse robot, use a servo motor to make an AI sorting robot.</td>
+      </tr>
+      <tr>
+        <td>4</td><td>Warehouse Robot - Structure Design</td><td>Recognize various structural parts and analyze robot structure design.</td>
+        <td>8</td><td>AI Sorting Robot - Program Design</td><td>Comprehensive use of the knowledge learned in the previous courses for programming.</td>
+      </tr>
+    </table>
+
+    <!-- Kit Details -->
+    <div class="details">
+      <img src="img2/AI Factory Robot Kit/details-kit.jpg" alt="AI Factory Kit Details" width="900">
+      <div class="number-grid">
+        <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div>
+        <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
+      </div>
+    </div>
+  </div>
+  <!-- Product Section End -->
+
+ 
+
+
+
+
+
+
+<div class="container py-5">
+  <h4 class="mb-4">Recommend Products</h4>
+  <div class="row text-center">
+    
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-smart-home.jpg" class="card-img-top" alt="AI Smart Home Learning Kit">
+        <div class="card-body">
+          <p class="card-text">AI Smart Home Learning Kit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/weecore-bot.jpg" class="card-img-top" alt="WeeeCore Bot AIOT Voice Programming Robot">
+        <div class="card-body">
+          <p class="card-text">WeeeCore Bot AIOT Voice Programming Robot</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-steam-kit.jpg" class="card-img-top" alt="AI STEAM Display Solution - AI Maker Space Kit">
+        <div class="card-body">
+          <p class="card-text">AI STEAM Display Solution - AI Maker Space Kit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-interactive-display.jpg" class="card-img-top" alt="AI Interactive Display Solution - AI Maker Space Kit">
+        <div class="card-body">
+          <p class="card-text">AI Interactive Display Solution - AI Maker Space Kit</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+         <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+  <div class="container py-5">
+
+    <!-- Contact Info -->
+    <div class="row g-4 rounded mb-5" style="background: rgba(255, 255, 255, .03);">
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle  d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px; ">
+            <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Address</h4>
+            <p class="mb-2">39-8-28, PAIDAYA STREET, BACK SIDE GATEWAY HOTEL, Labbipet, Vijayawada, Andhra Pradesh
+              520010</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle  d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fas fa-envelope fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Mail Us</h4>
+            <p class="mb-2">info@purpletechnosolutions.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Telephone</h4>
+            <p class="mb-2">93469 9346 99</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fab fa-firefox-browser fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Website</h4>
+            <p class="mb-2">yoursite@ex.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="row g-5">
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Products</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> STEAM Robot Kit</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> AI x IoT Education</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Open-Source Kit</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Maker Space</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Competition</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Robot Parts</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Quick Links</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Products</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Latest News</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Company News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Industry News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Videos</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <h4 class="text-primary mb-4">Contact Us</h4>
+        <form action="#" method="post" class="p-3 border rounded bg-dark">
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Your Name *">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control bg-dark text-white border-light" placeholder="Email Address *">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Country">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Phone Number *">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control bg-dark text-white border-light" rows="3"
+              placeholder="Your message must be between 20–3,000 characters!"></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+ <!-- Back to Top -->
+  <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

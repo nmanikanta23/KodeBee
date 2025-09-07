@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KodeBee - AI x IoT Education</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+  <!-- Icon Font Stylesheet -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .container-main {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      margin-right: 20px;
+    }
+    .sidebar h3 {
+      background: #f97316;
+      color: #fff;
+      padding: 10px;
+      margin: 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #ddd;
+    }
+    .sidebar ul li {
+      padding: 10px;
+      border-bottom: 1px dashed #aaa;
+      cursor: pointer;
+    }
+    .sidebar ul li:hover {
+      background: #f3f3f3;
+    }
+    .contact {
+      margin-top: 20px;
+    }
+    .contact h3 {
+      background: #f97316;
+      color: #fff;
+      padding: 10px;
+      margin: 0;
+    }
+    /* Main content */
+    .main-content {
+      flex: 1;
+    }
+    .main-content h2 {
+      margin-bottom: 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 10px;
+      background: #fff;
+    }
+    .product a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+      max-height: 180px;
+      object-fit: contain;
+    }
+    .product p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Spinner Start -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Topbar Start -->
+  <div class="container-fluid px-5 d-none border-bottom d-lg-block">
+    <div class="row gx-0 align-items-center">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 text-center">
+        <small class="text-dark">Call Us: </small>
+        <a href="#" class="text-muted">9346 9346 99</a>
+      </div>
+      <div class="col-lg-4 text-end">
+        <div class="d-inline-flex align-items-center" style="height: 45px;">
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle text-muted mx-2" data-bs-toggle="dropdown"><small>English</small></a>
+            <div class="dropdown-menu rounded">
+              <a href="#" class="dropdown-item">English</a>
+              <a href="#" class="dropdown-item">Turkish</a>
+              <a href="#" class="dropdown-item">Spanish</a>
+              <a href="#" class="dropdown-item">Italian</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle text-muted ms-2" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
+            <div class="dropdown-menu rounded">
+              <a href="#" class="dropdown-item">Login</a>
+              <a href="#" class="dropdown-item">Wishlist</a>
+              <a href="#" class="dropdown-item">My Cart</a>
+              <a href="#" class="dropdown-item">Notifications</a>
+              <a href="#" class="dropdown-item">Account Settings</a>
+              <a href="#" class="dropdown-item">My Account</a>
+              <a href="#" class="dropdown-item">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <div class="container-fluid nav-bar p-0">
+    <div class="row gx-0 bg-primary px-5 align-items-center">
+      <div class="col-md-4 col-lg-3 text-lg-start">
+        <a href="index.html" class="navbar-brand p-0">
+           <<h1 class="display-5 text-white m-0">
+    <img src="img2/KodeBee.jpg" alt="KodeBee" style="height:50px; margin-right:10px;">
+    KodeBee
+</h1>
+        </a>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+              <a href="index.html" class="nav-item nav-link">HOME</a>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">PRODUCTS</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="steam-robot-kit.html">STEAM Robot Kit</a></li>
+                  <li><a class="dropdown-item" href="ai-iot-education.html">AI x IoT Education</a></li>
+                  <li><a class="dropdown-item" href="open-source-kit.html">Open-Source Kit</a></li>
+                  <li><a class="dropdown-item" href="maker-space.html">Maker Space</a></li>
+                  <li><a class="dropdown-item" href="competition-robot.html">Competition Robot</a></li>
+                  <li><a class="dropdown-item" href="parts.html">Parts</a></li>
+                </ul>
+              </div>
+              <a href="download.html" class="nav-item nav-link">DOWNLOAD</a>
+              <a href="learn.html" class="nav-item nav-link">LEARN</a>
+              <a href="news.html" class="nav-item nav-link">NEWS</a>
+              <a href="contact.html" class="nav-item nav-link">CONTACT US</a>
+              <a href="about.html" class="nav-item nav-link">ABOUT US</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+
+
+
+<!-- Product Section -->
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- Product Images -->
+      <div class="col-lg-6">
+        <div id="mainImage" class="mb-3 text-center">
+          <img src="img2/WeeeCore Bot AIOT/WeeeCore Bot AIOT.png" alt="KodeBee Robot Kit" class="img-fluid rounded shadow">
+        </div>
+        <div class="d-flex justify-content-center gap-2">
+          <img src="img2/WeeeCore Bot AIOT/img1.png" alt="Robot 1" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/WeeeCore Bot AIOT/img2.png" alt="Robot 2" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/WeeeCore Bot AIOT/img3.png" alt="Robot 3" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+          <img src="img2/img5.png" alt="Robot 4" class="thumbnail-img img-fluid rounded shadow p-1" width="80"
+            onclick="changeImage(this)">
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="col-lg-6">
+        <h2 class="product-title">WeeeCore Bot AIOT Voice Programming Robot</h2>
+        <p class="product-model">Model: 181066</p>
+        <hr>
+        <p>
+          Unlock the world of interactive learning with WeeeCore Bot, an innovative AI
+           voice coding IoT drawing robot designed to inspire and educate. Perfect for 
+           learners of all ages, WeeeCore Bot combines fun with education, paving the way
+            for a future where technology and learning go hand in hand.
+
+ 
+        </p>
+        
+        <div class="d-flex gap-3 mt-4">
+          <a href="contact.html" class="btn btn-orange px-4 py-2">Contact Us</a>
+          <a href="inquiry.html" class="btn btn-gray px-4 py-2">Quick Inquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Product Section End -->
+
+
+
+
+
+
+<div class="container py-5">
+  <h2 class="fw-bold mb-3">
+    WeeeCore Bot: A Versatile Tool for Learners of All Levels
+  </h2>
+  <h3>AI Voice Coding IoT Drawing STEAM Robot</h3>
+  <p class="mb-4">
+    Welcome to the WeeeCore Bot, an advanced educational robot perfect 
+    for users from kindergarten to advanced learners. It's a gateway to mastering technology through hands-on experience.
+  </p>
+  
+  <div class="ratio ratio-16x9">
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/SqPxruHIwQ8" 
+      title="Weeemake AI Smart Home Learning Kit" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
+  
+
+  </div>
+</div>
+<div class="container py-5">
+  <h3 class="fw-bold mb-3">Why Everyone is Talking About the WeeeCore Bot:</h3>
+  
+  <ul>
+    <li><b>Versatile Learning:</b> From voice coding and drawing for early learners to Scratch 3.0 and microPython for advanced users.</li>
+    <li><b>Rich Features:</b> Equipped with sensors, WiFi, and expandable options, it's an ideal tool for both education and robotics enthusiasts.</li>
+    <li><b>A New Approach to STEAM:</b> Making complex concepts accessible and enjoyable for everyone.</li>
+  </ul>
+</div>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Features & In the Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #fafafa;
+    }
+
+    .section-container {
+      max-width: 1300px;   /* fixed width */
+      margin: 0 auto;      /* center align */
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      border-bottom: 3px solid orange; /* underline effect */
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    ul.features {
+      list-style: disc;
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+    ul.features li {
+      margin-bottom: 8px;
+    }
+    ul.features li span {
+      font-weight: bold;
+      color: #e67e22;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 boxes in one row */
+      gap: 20px;
+    }
+    @media (max-width: 700px) {
+      .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+
+    .feature-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background: #fff;
+      transition: transform 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    .feature-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .feature-content {
+      padding: 15px;
+    }
+    .feature-content h4 {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 8px;
+      border-left: 4px solid orange;
+      padding-left: 8px;
+    }
+    .feature-content ul {
+      margin-left: 60px;
+      margin-top: 5px;
+    }
+
+    /* In the Box Layout */
+    .inbox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .inbox-grid img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .inbox-grid ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- In the Box -->
+<div class="section-container">
+  <h3 class="section-title">In the Box</h3>
+  <div class="inbox-grid">
+    <!-- Left Side: Image -->
+    <div>
+      <img src="img2/WeeeCore Bot AIOT/part-list.jpg" alt="WeeeCore Bot In the Box"width="400">
+    </div>
+    <!-- Right Side: List -->
+    <div>
+      <ul>
+        <li>WeeeCore Controller</li>
+        <li>Chassis Expansion Board</li>
+        <li>Ultrasonic Sensor</li>
+        <li>Type C USB Cable</li>
+        <li>Accessories: Color Pen, Map, WeeeCore Holder</li>
+        <li>Quick Start Guide</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Key Features -->
+<div class="section-container">
+  <h3 class="section-title">Key Features</h3>
+  <ul class="features">
+    <li><span>Voice Coding:</span> Simple voice command control for beginners.</li>
+    <li><span>Advanced Programming:</span> Learn with Scratch 3.0 and microPython.</li>
+    <li><span>IoT Capabilities:</span> Connect and control with cutting-edge IoT integration.</li>
+    <li><span>Drawing:</span> Bring your artistic visions to life.</li>
+    <li><span>Expandable Electronics Interface:</span> Connect more devices via RJ11 and open-source ports.</li>
+  </ul>
+
+  <div class="features-grid">
+    <!-- Voice Coding -->
+    <div class="feature-card">
+      <img src="img2/WeeeCore Bot AIOT/voice-coding.jpg" alt="Voice Coding">
+      <div class="feature-content">
+        <h4>Voice Coding</h4>
+        <ul>
+          <li>Ideal for beginners, allowing young learners to command and control through simple voice instructions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Drawing -->
+    <div class="feature-card">
+      <img src="img2/WeeeCore Bot AIOT/drawing.jpg" alt="Drawing">
+      <div class="feature-content">
+        <h4>Drawing</h4>
+        <ul>
+          <li>Unleash creativity with the bot's drawing capabilities, perfect for integrating art into STEM.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Programming -->
+    <div class="feature-card">
+      <img src="img2/WeeeCore Bot AIOT/programming.jpg" alt="Programming">
+      <div class="feature-content">
+        <h4>Programming</h4>
+        <ul>
+          <li>Supports Scratch 3.0 and microPython, catering to a wide range of coding skills.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IoT & App Inventor Section</title>
+  <style>
+    :root { --gap: 24px; --card-bg: #fff; --muted: #6b7280; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, Arial, sans-serif; background:#f8fafc; color:#111827;}
+    .section { max-width: 1200px; margin: 40px auto; padding: 0 16px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr; /* left a bit wider; swap if you want */
+      gap: var(--gap);
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+    .card__body { padding: 18px; }
+    .title {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 22px; margin: 0 0 8px;
+    }
+    .title::before {
+      content: ""; width: 4px; height: 22px; background: #f59e0b; border-radius: 8px;
+    }
+    .muted { color: var(--muted); margin: 6px 0 14px; }
+    .list { margin: 0 0 14px 18px; }
+    .media {
+      width: 100%; display: block; object-fit: cover; background:#e5e7eb;
+      aspect-ratio: 16/9; /* keeps a nice shape; remove if not needed */
+    }
+    .badge {
+      display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px;
+      background:#eef2ff; color:#4338ca; margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="grid">
+      <!-- Left: APP Inventor / Dashboard -->
+      <div class="card">
+        <img class="media" src="img2/WeeeCore Bot AIOT/image1.jpg" alt="Blynk IoT dashboard and robot"/>
+        <div class="card__body">
+          <h2 class="title">APP Inventor</h2>
+          <p class="muted">
+            Build your own app for the WeeeCore Bot and leverage its IoT features.
+          </p>
+          <ul class="list">
+            <li>Real-time sensor widgets (Temp, Humidity, Soil, Light)</li>
+            <li>Cloud dashboard (Blynk) with controls and charts</li>
+            <li>Same firmware, different front-ends</li>
+          </ul>
+          <span class="badge">Dashboard View</span>
+        </div>
+      </div>
+
+      <!-- Right: IoT Integration -->
+      <div class="card">
+        <img class="media" src="img2/WeeeCore Bot AIOT/image2.jpg" alt="Mobile app controlling robot"/>
+        <div class="card__body">
+          <h2 class="title">IoT Integration</h2>
+          <p class="muted">
+            Explore practical IoT applications connecting everyday devices to the cloud.
+          </p>
+          <ul class="list">
+            <li>Control via mobile app (App Inventor)</li>
+            <li>Commands & telemetry through the same backend</li>
+            <li>Reusable device code (no changes needed)</li>
+          </ul>
+          <span class="badge">Mobile Control</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeeeCore Bot</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+    h2 { color: #ff6600; margin-top: 30px; }
+    img { max-width: 100%; border-radius: 8px; }
+    .section { margin-bottom: 40px; }
+    ul { margin-left: 20px; }
+    .faq { background: #f9f9f9; padding: 15px; border-radius: 8px; }
+    .faq h3 { margin-top: 10px; color: #333; }
+  </style>
+</head>
+<body>
+
+  <!-- Sensor Section -->
+  <div class="section">
+    <h2>Rich Sensor Array</h2>
+    <p>Includes gyroscope, ultrasonic, light sensors, and more for a comprehensive educational experience.</p>
+    <img src="img2/WeeeCore Bot AIOT/image3.jpg" alt="WeeeCore Bot Sensor Array"width="1000">
+  </div>
+
+  <!-- Open to Play -->
+  <div class="section">
+    <h2>Open to Play</h2>
+    <h3>Voice Coding</h3>
+    <ul>
+      <li>WIFI IoT smart speaker</li>
+      <li>Lighting, dancing, drawing</li>
+      <li>Smart IoT projects</li>
+      <li>Supports English commands (go, move, turn left, right, ahead, stop, draw, open, close, play, OK)</li>
+      <li>Kids can create & interact with simple voice-based AI programs</li>
+    </ul>
+    <img src="img2/WeeeCore Bot AIOT/voice-coding.jpg" alt="Voice Coding with WeeeCore Bot" width="1000">
+  </div>
+
+  <!-- Line Following -->
+  <div class="section">
+    <h2>Line Following Mode (Quad Line-Tracking Sensor)</h2>
+    <p>
+      Program the line-tracking function! With a tracking sensor set and tracking map, the bot can automatically follow black tracks on a white board. 
+      This helps students learn about AI thinking, smart robots, and automation.
+    </p>
+    <img src="img2/WeeeCore Bot AIOT/line-following.jpg" alt="WeeeCore Bot Line Following Mode"  width="1000">
+  </div>
+
+  <!-- FAQs -->
+  <div class="section faq">
+    <h3>Frequently Asked Questions</h3>
+    <h5>1. What is the WeeeCore Bot?</h5>
+    <p>The WeeeCore Bot is an educational robot kit designed to teach students IoT, AI, and robotics through fun, hands-on activities.</p>
+
+    <h5>2. What features does it support?</h5>
+    <p>It supports voice coding, IoT integration, rich sensor arrays, line-following mode, and app control.</p>
+
+    <h5>3. Is programming required?</h5>
+    <p>No prior programming is required. Kids can start with drag-and-drop coding and progress to advanced IoT/AI applications.</p>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+<div class="container py-5">
+  <h4 class="mb-4">Recommend Products</h4>
+  <div class="row text-center">
+    
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-smart-home.jpg" class="card-img-top" alt="AI Smart Home Learning Kit">
+        <div class="card-body">
+          <p class="card-text">AI Smart Home Learning Kit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/weecore-bot.jpg" class="card-img-top" alt="WeeeCore Bot AIOT Voice Programming Robot">
+        <div class="card-body">
+          <p class="card-text">WeeeCore Bot AIOT Voice Programming Robot</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-steam-kit.jpg" class="card-img-top" alt="AI STEAM Display Solution - AI Maker Space Kit">
+        <div class="card-body">
+          <p class="card-text">AI STEAM Display Solution - AI Maker Space Kit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6 mb-4">
+      <div class="card border-0 shadow-sm">
+        <img src="img2/temp/ai-interactive-display.jpg" class="card-img-top" alt="AI Interactive Display Solution - AI Maker Space Kit">
+        <div class="card-body">
+          <p class="card-text">AI Interactive Display Solution - AI Maker Space Kit</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+         <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+  <div class="container py-5">
+
+    <!-- Contact Info -->
+    <div class="row g-4 rounded mb-5" style="background: rgba(255, 255, 255, .03);">
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle  d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px; ">
+            <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Address</h4>
+            <p class="mb-2">39-8-28, PAIDAYA STREET, BACK SIDE GATEWAY HOTEL, Labbipet, Vijayawada, Andhra Pradesh
+              520010</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle  d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fas fa-envelope fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Mail Us</h4>
+            <p class="mb-2">info@purpletechnosolutions.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Telephone</h4>
+            <p class="mb-2">93469 9346 99</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="rounded p-4">
+          <div class="rounded-circle d-flex align-items-center justify-content-center mb-4"
+            style="width: 70px; height: 70px;">
+            <i class="fab fa-firefox-browser fa-2x text-primary"></i>
+          </div>
+          <div>
+            <h4 class="text-white">Website</h4>
+            <p class="mb-2">yoursite@ex.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="row g-5">
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Products</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> STEAM Robot Kit</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> AI x IoT Education</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Open-Source Kit</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Maker Space</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Competition</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Robot Parts</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Quick Links</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Products</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="footer-item d-flex flex-column">
+          <h4 class="text-primary mb-4">Latest News</h4>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Company News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Industry News</a>
+          <a href="#"><i class="fas fa-angle-right me-2"></i> Videos</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <h4 class="text-primary mb-4">Contact Us</h4>
+        <form action="#" method="post" class="p-3 border rounded bg-dark">
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Your Name *">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control bg-dark text-white border-light" placeholder="Email Address *">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Country">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control bg-dark text-white border-light" placeholder="Phone Number *">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control bg-dark text-white border-light" rows="3"
+              placeholder="Your message must be between 20–3,000 characters!"></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+ <!-- Back to Top -->
+  <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
